@@ -48,7 +48,6 @@ public class Review {
         this.reviewId = reviewId;
         return this;
     }
-
         public Builder setCustomerId(String customerId) {
             this.customerId = customerId;
             return this;
