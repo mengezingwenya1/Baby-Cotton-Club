@@ -1,3 +1,11 @@
+/*
+Baby Cotton Club
+OrderLine POJO Class
+Author: Tsireledzo Netshilonwe
+Student Number: 230666426
+Date: 2025/05/10
+*/
+
 package za.ac.cput.domain;
 
 public class OrderLine {
@@ -86,16 +94,20 @@ public class OrderLine {
             this.subTotal = subTotal;
             return this;
         }
+        public Builder copy(OrderLine orderLine) {
+            this.orderLineId = orderLine.orderLineId;
+            this.orderId = orderLine.orderId;
+            this.productId = orderLine.productId;
+            this.quantity = orderLine.quantity;
+            this.unitPrice = orderLine.unitPrice;
+            this.subTotal = orderLine.subTotal;
+            return this;
+        }
 
         public OrderLine build() {
             return new OrderLine(this);
         }
     }
 }
-/*
-OrderLine POJO Class
-Author: Tsireledzo Netshilonwe
-Student Number: 230666426
-Date: 2025/05/10
-*/
+
 
