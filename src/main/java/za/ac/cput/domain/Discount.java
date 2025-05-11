@@ -22,14 +22,42 @@ public class Discount {
     public Discount() {
     }
 
-    public Discount(String discountId, String discountCode, String description, String discountType, double discountValue, Date startDate, Date endDate) {
-        this.discountId = discountId;
-        this.discountCode = discountCode;
-        this.description = description;
-        this.discountType = discountType;
-        this.discountValue = discountValue;
-        this.startDate = startDate;
-        this.endDate = endDate;
+    public Discount(Builder builder) {
+        this.discountId = builder.discountId;
+        this.discountCode = builder.discountCode;
+        this.description = builder.description;
+        this.discountType = builder.discountType;
+        this.discountValue = builder.discountValue;
+        this.startDate = builder.startDate;
+        this.endDate = builder.endDate;
+    }
+
+    public String getDiscountId() {
+        return discountId;
+    }
+
+    public String getDiscountCode() {
+        return discountCode;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public String getDiscountType() {
+        return discountType;
+    }
+
+    public double getDiscountValue() {
+        return discountValue;
+    }
+
+    public Date getStartDate() {
+        return startDate;
+    }
+
+    public Date getEndDate() {
+        return endDate;
     }
 
     public static class Builder {
@@ -76,6 +104,19 @@ public class Discount {
             return this;
         }
 
+        @Override
+        public String toString() {
+            return "Discount{" +
+                    "discountId='" + discountId + '\'' +
+                    ", discountCode='" + discountCode + '\'' +
+                    ", description='" + description + '\'' +
+                    ", discountType='" + discountType + '\'' +
+                    ", discountValue=" + discountValue +
+                    ", startDate=" + startDate +
+                    ", endDate=" + endDate +
+                    '}';
+        }
+
         public Builder copy(Discount discount) {
             this.discountId = discount.discountId;
             this.discountCode = discount.discountCode;
@@ -88,48 +129,7 @@ public class Discount {
         }
 
         public Discount build() {
-            return new Discount(discountId, discountCode, description, discountType, discountValue, startDate, endDate);
+            return new Discount(this);
         }
-    }
-
-    public String getDiscountId() {
-        return discountId;
-    }
-
-    public String getDiscountCode() {
-        return discountCode;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public String getDiscountType() {
-        return discountType;
-    }
-
-    public double getDiscountValue() {
-        return discountValue;
-    }
-
-    public Date getStartDate() {
-        return startDate;
-    }
-
-    public Date getEndDate() {
-        return endDate;
-    }
-
-    @Override
-    public String toString() {
-        return "Discount{" +
-                "discountId='" + discountId + '\'' +
-                ", discountCode='" + discountCode + '\'' +
-                ", description='" + description + '\'' +
-                ", discountType='" + discountType + '\'' +
-                ", discountValue=" + discountValue +
-                ", startDate=" + startDate +
-                ", endDate=" + endDate +
-                '}';
     }
 }
