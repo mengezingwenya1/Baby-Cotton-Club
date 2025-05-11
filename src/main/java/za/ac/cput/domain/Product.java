@@ -17,13 +17,7 @@ public class Product {
     }
 
 
-    public Product(String productId, String productName, String color, short price, String inStock) {
-        this.productId = productId;
-        this.productName = productName;
-        this.color = color;
-        this.price = price;
-        this.inStock = inStock;
-    }
+
 private Product(Builder builder) {
         this.productId = builder.productId;
         this.productName = builder.productName;

@@ -14,7 +14,7 @@ public class Supplier {
     private String address;
     private String email;
 
-    private Supplier() {
+    public Supplier() {
     }
 
     public Supplier(Builder builder) {
