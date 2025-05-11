@@ -1,3 +1,10 @@
+/*
+Baby Cotton Club
+Order POJO Class
+Author: Tsireledzo Netshilonwe
+Student Number: 230666426
+Date: 2025/05/10
+*/
 package za.ac.cput.domain;
 
 import java.time.LocalDate;
@@ -92,11 +99,6 @@ public class Order {
         }
     }
 }
-/*
-Order POJO Class
-Author: Tsireledzo Netshilonwe
-Student Number: 230666426
-Date: 2025/05/10
-*/
+
 
 
