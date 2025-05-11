@@ -1,3 +1,10 @@
+/*
+ * Inventory.java
+ * Inventory POJO class
+ * Author: O Ntsaluba (230741754)
+ * Date: 11 May 2025
+ */
+
 package za.ac.cput.domain;
 
 public class Inventory {
