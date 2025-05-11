@@ -16,13 +16,6 @@ public class Shipment {
     public Shipment() {
     }
 
-    public Shipment(String shipmentId, String carrierName, String shipmentStatus, double shippingCost) {
-        this.shipmentId = shipmentId;
-        this.carrierName = carrierName;
-        this.shipmentStatus = shipmentStatus;
-        this.shippingCost = shippingCost;
-    }
-
     private Shipment(Builder builder) {
         this.shipmentId = builder.shipmentId;
         this.carrierName = builder.carrierName;
