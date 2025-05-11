@@ -3,7 +3,6 @@ Category.java
 Category POJO class
 Author: Olwethu Nene(230277845)
 Date: 11 May 2025
-
  */
 
 package za.ac.cput.domain;
@@ -58,4 +57,5 @@ public Category(Builder builder){
     public Category build(){
         return new Category();
     }
+
 }

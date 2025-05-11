@@ -1,3 +1,9 @@
+/*
+Payment POJO Class
+Author: Phindile Lisa Ngozi
+Student Number: 230640893
+Date: 2025/05/11
+ */
 package za.ac.cput.domain;
 
 import java.time.LocalDate;
@@ -10,19 +16,11 @@ public class Payment {
     private String paymentStatus;
     private double amount;
 
-    private Payment() {
+    public Payment() {
+
     }
 
-    public Payment(String paymentId, String orderId, LocalDate paymentDate, String paymentMethod, String paymentStatus, double amount) {
-        this.paymentId = paymentId;
-        this.orderId = orderId;
-        this.paymentDate = paymentDate;
-        this.paymentMethod = paymentMethod;
-        this.paymentStatus = paymentStatus;
-        this.amount = amount;
-    }
-
-    private Payment(Builder builder) {
+    public Payment(Builder builder) {
         this.paymentId = builder.paymentId;
         this.orderId = builder.orderId;
         this.paymentDate = builder.paymentDate;
@@ -132,9 +130,4 @@ public class Payment {
         }
     }
 }
-/*
-Payment POJO Class
-Author: Phindile Lisa Ngozi
-Student Number: 230640893
-Date: 2025/05/10
- */
+

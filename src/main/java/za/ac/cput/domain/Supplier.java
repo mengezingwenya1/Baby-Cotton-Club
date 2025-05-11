@@ -1,3 +1,10 @@
+
+/*
+Supplier POJO Class
+Author: Phindile Lisa Ngozi
+Student Number: 230640893
+Date: 2025/05/11
+ */
 package za.ac.cput.domain;
 
 public class Supplier {
@@ -7,18 +14,10 @@ public class Supplier {
     private String address;
     private String email;
 
-    private Supplier() {
+    public Supplier() {
     }
 
-    public Supplier(String supplierId, String supplierName, String contactNumber, String address, String email) {
-        this.supplierId = supplierId;
-        this.supplierName = supplierName;
-        this.contactNumber = contactNumber;
-        this.address = address;
-        this.email = email;
-    }
-
-    private Supplier(Builder builder) {
+    public Supplier(Builder builder) {
         this.supplierId = builder.supplierId;
         this.supplierName = builder.supplierName;
         this.contactNumber = builder.contactNumber;
@@ -114,9 +113,3 @@ public class Supplier {
         }
     }
 }
-/*
-Supplier POJO Class
-Author: Phindile Lisa Ngozi
-Student Number: 230640893
-Date: 2025/05/10
- */
