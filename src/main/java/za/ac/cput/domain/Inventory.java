@@ -18,12 +18,32 @@ public class Inventory {
     public Inventory() {
     }
 
-    public Inventory(String inventoryId, String productId, String receivedDate, int stockAdded, String supplierId) {
-        this.inventoryId = inventoryId;
-        this.productId = productId;
-        this.receivedDate = receivedDate;
-        this.stockAdded = stockAdded;
-        this.supplierId = supplierId;
+    private Inventory(Builder builder) {
+        this.inventoryId = builder.inventoryId;
+        this.productId = builder.productId;
+        this.receivedDate = builder.receivedDate;
+        this.stockAdded = builder.stockAdded;
+        this.supplierId = builder.supplierId;
+    }
+
+    public String getInventoryId() {
+        return inventoryId;
+    }
+
+    public String getProductId() {
+        return productId;
+    }
+
+    public String getReceivedDate() {
+        return receivedDate;
+    }
+
+    public int getStockAdded() {
+        return stockAdded;
+    }
+
+    public String getSupplierId() {
+        return supplierId;
     }
 
     public static class Builder {
@@ -58,7 +78,18 @@ public class Inventory {
             return this;
         }
 
-        public Builder copy (Inventory inventory) {
+        @Override
+        public String toString() {
+            return "Inventory{" +
+                    "inventoryId='" + inventoryId + '\'' +
+                    ", productId='" + productId + '\'' +
+                    ", receivedDate='" + receivedDate + '\'' +
+                    ", stockAdded=" + stockAdded +
+                    ", supplierId='" + supplierId + '\'' +
+                    '}';
+        }
+
+        public Builder copy(Inventory inventory) {
             this.inventoryId = inventory.inventoryId;
             this.productId = inventory.productId;
             this.receivedDate = inventory.receivedDate;
@@ -68,38 +99,7 @@ public class Inventory {
         }
 
         public Inventory build() {
-            return new Inventory(inventoryId, productId, receivedDate, stockAdded, supplierId);
+            return new Inventory(this);
         }
-    }
-
-    public String getInventoryId() {
-        return inventoryId;
-    }
-
-    public String getProductId() {
-        return productId;
-    }
-
-    public String getReceivedDate() {
-        return receivedDate;
-    }
-
-    public int getStockAdded() {
-        return stockAdded;
-    }
-
-    public String getSupplierId() {
-        return supplierId;
-    }
-
-    @Override
-    public String toString() {
-        return "Inventory{" +
-                "inventoryId='" + inventoryId + '\'' +
-                ", productId='" + productId + '\'' +
-                ", receivedDate='" + receivedDate + '\'' +
-                ", stockAdded=" + stockAdded +
-                ", supplierId='" + supplierId + '\'' +
-                '}';
     }
 }
