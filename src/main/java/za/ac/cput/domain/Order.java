@@ -78,6 +78,14 @@ public class Order {
             this.orderLine = orderLine;
             return this;
         }
+        public Builder copy(Order order) {
+            this.orderId = order.orderId;
+            this.customerId = order.customerId;
+            this.orderDate = order.orderDate;
+            this.totalAmount = order.totalAmount;
+            this.orderLine = order.orderLine;
+            return this;
+        }
 
         public Order build() {
             return new Order(this);
