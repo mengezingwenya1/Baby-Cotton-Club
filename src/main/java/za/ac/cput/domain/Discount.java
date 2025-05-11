@@ -1,6 +1,6 @@
 /*
  * Discount.java
- * Discount POJO class
+ * Discount POJO class.
  * Author: O Ntsaluba (230741754)
  * Date: 11 May 2025
  */
