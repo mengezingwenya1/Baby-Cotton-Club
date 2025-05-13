@@ -15,6 +15,7 @@ public class OrderLine {
     private int quantity;
     private double unitPrice;
     private double subTotal;
+    private int discountId;
 
     public  OrderLine(){
 
@@ -26,6 +27,7 @@ public class OrderLine {
         this.quantity = builder.quantity;
         this.unitPrice = builder.unitPrice;
         this.subTotal = builder.subTotal;
+        this.discountId = builder.discountId;
     }
     public String getOrderLineId() {
         return orderLineId;
@@ -45,6 +47,9 @@ public class OrderLine {
     public double getSubTotal() {
         return subTotal;
     }
+    public int getDiscountId() {
+        return discountId;
+    }
 
     @Override
     public String toString() {
@@ -55,8 +60,10 @@ public class OrderLine {
                 ", quantity=" + quantity +
                 ", unitPrice=" + unitPrice +
                 ", subTotal=" + subTotal +
+                ", discountId=" + discountId +
                 '}';
     }
+
     public static class Builder {
         private String orderLineId;
         private String orderId;
@@ -64,6 +71,7 @@ public class OrderLine {
         private int quantity;
         private double unitPrice;
         private double subTotal;
+        private int discountId;
 
         public Builder setOrderLineId(String orderLineId) {
             this.orderLineId = orderLineId;
@@ -94,6 +102,10 @@ public class OrderLine {
             this.subTotal = subTotal;
             return this;
         }
+        public Builder setDiscountId(int discountId) {
+            this.discountId = discountId;
+            return this;
+        }
         public Builder copy(OrderLine orderLine) {
             this.orderLineId = orderLine.orderLineId;
             this.orderId = orderLine.orderId;
@@ -101,6 +113,7 @@ public class OrderLine {
             this.quantity = orderLine.quantity;
             this.unitPrice = orderLine.unitPrice;
             this.subTotal = orderLine.subTotal;
+            this.discountId = orderLine.discountId;
             return this;
         }
 
