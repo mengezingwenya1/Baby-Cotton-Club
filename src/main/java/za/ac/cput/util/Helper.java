@@ -1,11 +1,14 @@
 package za.ac.cput.util;
 
+import org.apache.commons.validator.routines.EmailValidator;
+
 import java.time.LocalDate;
 
 public class Helper {
 
 
     public static boolean isNullOrEmpty(String s) {
+
         return s == null || s.isEmpty();
     }
 
@@ -19,4 +22,13 @@ public class Helper {
     public static double calculateSubTotal(int quantity, double unitPrice) {
         return quantity * unitPrice;
     }
+    public static boolean isValidEmail(String email){
+        EmailValidator validator = EmailValidator.getInstance();
+        if (validator.isValid(email)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
+
