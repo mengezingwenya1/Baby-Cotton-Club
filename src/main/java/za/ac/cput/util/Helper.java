@@ -30,5 +30,18 @@ public class Helper {
             return false;
         }
     }
+    public static boolean isValidStreetNumber(short streetNumber) {
+        if (streetNumber < 1 || streetNumber > 99999) {
+            return false;
+        }
+        return true;
+    }
+    public static boolean isValidPostalCode(short postalCode) {
+        if (postalCode < 1000 || postalCode > 9999) {
+            return false;
+        }
+        return true;
+    }
+
 }
 
