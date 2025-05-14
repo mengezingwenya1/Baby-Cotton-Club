@@ -10,11 +10,11 @@ package za.ac.cput.domain;
 
 public class Address {
     protected int addressId;
-    protected int streetNumber;
+    protected short streetNumber;
     protected String streetName;
     protected String suburb;
     protected String city;
-    protected String postalCode;
+    protected short postalCode;
     protected String province;
 
 
@@ -33,7 +33,7 @@ public class Address {
     }
     public int getAddressId() { return addressId; }
 
-    public int getStreetNumber() {
+    public short getStreetNumber() {
         return streetNumber;
     }
 
@@ -49,7 +49,7 @@ public class Address {
         return city;
     }
 
-    public String getPostalCode() {
+    public short getPostalCode() {
         return postalCode;
     }
 
@@ -71,11 +71,11 @@ public class Address {
 
     public static class Builder {
         private int addressId;
-        private int streetNumber;
+        private short streetNumber;
         private String streetName;
         private String suburb;
         private String city;
-        private String postalCode;
+        private short postalCode;
         private String province;
 
         public Builder setAddressId(int addressId) {
@@ -83,7 +83,7 @@ public class Address {
             return this;
         }
 
-        public Builder setStreetNumber(int streetNumber) {
+        public Builder setStreetNumber(short streetNumber) {
             this.streetNumber = streetNumber;
             return this;
         }
@@ -99,7 +99,7 @@ public class Address {
             this.city = city;
             return this;
         }
-        public Builder setPostalCode(String postalCode) {
+        public Builder setPostalCode(short postalCode) {
             this.postalCode = postalCode;
             return this;
         }
