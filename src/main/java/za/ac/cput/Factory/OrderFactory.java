@@ -7,12 +7,13 @@ import java.time.LocalDate;
 
 public class OrderFactory {
 
-    public static Order createOrder(String orderId, String customerId, LocalDate orderDate, double totalAmount, int discountId) {
-        if (Helper.isNullOrEmpty(orderId) || Helper.isNullOrEmpty(customerId) || Helper.isNullOrEmpty(String.valueOf(orderDate))) {
+    public static Order createOrder(String orderId, String customerId, String orderDateStr, double totalAmount, int discountId) {
+
+        if (Helper.isNullOrEmpty(orderId) || Helper.isNullOrEmpty(customerId)) {
             return null;
         }
 
-
+        LocalDate orderDate = Helper.getOrderDate(orderDateStr);
         return new Order.Builder()
                 .setOrderId(orderId)
                 .setCustomerId(customerId)
