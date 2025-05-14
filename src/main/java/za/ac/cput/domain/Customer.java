@@ -14,6 +14,8 @@ public class Customer {
     private String lastName;
     private String email;
     private String phoneNumber;
+
+
     private Address address;
 
     protected Customer() {
@@ -25,7 +27,7 @@ public class Customer {
         this.lastName = builder.lastName;
         this.email = builder.email;
         this.phoneNumber = builder.phoneNumber;
-        this.address = builder.address;
+
 
     }
     public int getCustomerId() {
@@ -48,10 +50,6 @@ public class Customer {
         return phoneNumber;
     }
 
-    public Address getAddress() {
-        return address;
-    }
-
     @Override
     public String toString() {
         return "Customer{" +
@@ -60,7 +58,7 @@ public class Customer {
                 ", lastName='" + lastName + '\'' +
                 ", email='" + email + '\'' +
                 ", phoneNumber='" + phoneNumber + '\'' +
-                ", address='" + address + '\'' +
+
                 '}';
     }
 
@@ -70,7 +68,7 @@ public class Customer {
         private String lastName;
         private String email;
         private String phoneNumber;
-        private Address address;
+
 
         public Builder setCustomerId(int customerId) {
             this.customerId = customerId;
@@ -97,10 +95,6 @@ public class Customer {
             return this;
         }
 
-        public Builder setAddress(Address address) {
-            this.address = address;
-            return this;
-        }
         public Customer copy(Customer customer) {
 
             this.customerId = customer.customerId;
@@ -108,7 +102,6 @@ public class Customer {
             this.lastName = customer.lastName;
             this.email = customer.email;
             this.phoneNumber = customer.phoneNumber;
-            this.address = customer.address;
             return customer;
 
 
