@@ -9,7 +9,7 @@ package za.ac.cput.domain;
 
 public class Category {
 
-    private String categoryId;
+    private Integer categoryId;
     private String categoryName;
 
     public Category() {
@@ -20,7 +20,7 @@ public Category(Builder builder){
         this.categoryName = builder.categoryName;
 }
 
-    public String getCategoryId() {
+    public Integer getCategoryId() {
         return categoryId;
     }
 
@@ -28,18 +28,20 @@ public Category(Builder builder){
         return categoryName;
     }
 
-    public static class Builder{
-        private String categoryId;
+    public static class Builder {
+        private Integer categoryId;
         private String categoryName;
 
-        public Builder setCategoryId(String categoryId) {
+        public Builder setCategoryId(Integer categoryId) {
             this.categoryId = categoryId;
             return this;
         }
-            public Builder setCategoryName(String categoryName){
-                this.categoryName = categoryName;
-                return this;
-            }
+
+        public Builder setCategoryName(String categoryName) {
+            this.categoryName = categoryName;
+            return this;
+        }
+
         @Override
         public String toString() {
             return "Category{" +
@@ -47,15 +49,17 @@ public Category(Builder builder){
                     ", categoryName='" + categoryName + '\'' +
                     '}';
         }
-            public Builder copy (Builder builder){
-                this.categoryId = builder.categoryId;
-                this.categoryName = builder.categoryName;
-                return this;
-            }
 
+        public Builder copy(Builder builder) {
+            this.categoryId = builder.categoryId;
+            this.categoryName = builder.categoryName;
+            return this;
+        }
+
+        public Category build() {
+            return new Category(this);
+        }
     }
-    public Category build(){
-        return new Category();
     }
 
-}
+
