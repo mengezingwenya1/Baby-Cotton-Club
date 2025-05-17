@@ -20,7 +20,10 @@ class OrderFactoryTest {
     public void testCreateOrderWithAllAttributes() {
         assertNotNull(order1);
         System.out.println(order1.toString());
-
-
+    }
+    @Test
+    void testCreateOrderWithEmptyCustomerId() {
+        Order invalidOrder = OrderFactory.createOrder("O123", "", "20231001", 200.0, 1);
+        assertNull(invalidOrder);
     }
 }
