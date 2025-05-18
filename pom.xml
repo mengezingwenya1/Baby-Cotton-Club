@@ -23,10 +23,6 @@
             <scope>test</scope>
         </dependency>
 
-
-
-    </dependencies>
-    <dependencies>
         <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
@@ -47,7 +43,10 @@
             <artifactId>commons-validator</artifactId>
             <version>1.7</version>
         </dependency>
+
     </dependencies>
+
+
     <build>
         <plugins>
             <plugin>
