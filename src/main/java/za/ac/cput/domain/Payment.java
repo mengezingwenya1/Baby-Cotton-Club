@@ -2,7 +2,7 @@
 Payment POJO Class
 Author: Phindile Lisa Ngozi
 Student Number: 230640893
-Date: 2025/05/11
+Date: 18 May 2025
  */
 package za.ac.cput.domain;
 
@@ -17,10 +17,9 @@ public class Payment {
     private double amount;
 
     public Payment() {
-
     }
 
-    public Payment(Builder builder) {
+    private Payment(Builder builder) {
         this.paymentId = builder.paymentId;
         this.orderId = builder.orderId;
         this.paymentDate = builder.paymentDate;
@@ -103,25 +102,13 @@ public class Payment {
             return this;
         }
 
-        @Override
-        public String toString() {
-            return "Builder{" +
-                    "paymentId='" + paymentId + '\'' +
-                    ", orderId='" + orderId + '\'' +
-                    ", paymentDate=" + paymentDate +
-                    ", paymentMethod='" + paymentMethod + '\'' +
-                    ", paymentStatus='" + paymentStatus + '\'' +
-                    ", amount=" + amount +
-                    '}';
-        }
-
         public Builder copy(Payment payment) {
-            this.paymentId = payment.getPaymentId();
-            this.orderId = payment.getOrderId();
-            this.paymentDate = payment.getPaymentDate();
-            this.paymentMethod = payment.getPaymentMethod();
-            this.paymentStatus = payment.getPaymentStatus();
-            this.amount = payment.getAmount();
+            this.paymentId = payment.paymentId;
+            this.orderId = payment.orderId;
+            this.paymentDate = payment.paymentDate;
+            this.paymentMethod = payment.paymentMethod;
+            this.paymentStatus = payment.paymentStatus;
+            this.amount = payment.amount;
             return this;
         }
 
@@ -130,4 +117,3 @@ public class Payment {
         }
     }
 }
-

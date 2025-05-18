@@ -52,8 +52,11 @@ public class Helper {
         return reviewId != null && reviewId > 0;
     }
 
-    public static boolean isValidId(int inventoryId) {
-        return false;
+    public static boolean isValidAmount(double amount) {
+        return amount > 0;
+    }
+
+    public static boolean isValidDate(LocalDate date) {
+        return date != null && !date.isAfter(LocalDate.now());
     }
 }
-
