@@ -51,5 +51,14 @@ public class Helper {
     public static boolean isValidReviewId(Integer reviewId) {
         return reviewId != null && reviewId > 0;
     }
+
+    public static boolean isValidAmount(double amount) {
+        return amount > 0;
+    }
+
+    public static boolean isValidDate(LocalDate date) {
+        return date != null && !date.isAfter(LocalDate.now());
+    }
 }
+
 
