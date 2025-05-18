@@ -14,7 +14,8 @@ public class Order {
     private String customerId;
     private LocalDate orderDate;
     private double totalAmount;
-    private OrderLine orderLine;
+    private int discountId;
+
 
 
     public Order(){
@@ -26,7 +27,7 @@ public class Order {
         this.customerId = builder.customerId;
         this.orderDate = builder.orderDate;
         this.totalAmount = builder.totalAmount;
-        this.orderLine = builder.orderLine;
+        this.discountId = builder.discountId;
     }
     public String getOrderId() {
         return orderId;
@@ -40,8 +41,8 @@ public class Order {
     public double getTotalAmount() {
         return totalAmount;
     }
-    public OrderLine getOrderLine() {
-        return orderLine;
+    public int getDiscountId() {
+        return discountId;
     }
 
     @Override
@@ -51,7 +52,7 @@ public class Order {
                 ", customerId=" + customerId +
                 ", orderDate=" + orderDate +
                 ", totalAmount=" + totalAmount +
-                ", orderLine=" + orderLine +
+                ", discountId=" + discountId +
                 '}';
     }
 
@@ -60,7 +61,7 @@ public class Order {
         private String customerId;
         private LocalDate orderDate;
         private double totalAmount;
-        private OrderLine orderLine;
+        private int discountId;
 
         public Builder setOrderId(String orderId) {
             this.orderId = orderId;
@@ -81,8 +82,8 @@ public class Order {
             this.totalAmount = totalAmount;
             return this;
         }
-        public Builder setOrderLine(OrderLine orderLine) {
-            this.orderLine = orderLine;
+        public Builder setDiscountId(int discountId) {
+            this.discountId = discountId;
             return this;
         }
         public Builder copy(Order order) {
@@ -90,7 +91,7 @@ public class Order {
             this.customerId = order.customerId;
             this.orderDate = order.orderDate;
             this.totalAmount = order.totalAmount;
-            this.orderLine = order.orderLine;
+            this.discountId = order.discountId;
             return this;
         }
 
