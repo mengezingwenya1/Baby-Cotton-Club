@@ -41,7 +41,19 @@ public class Helper {
             return false;
         }
         return true;
+
     }
 
+    public static boolean isValidCategoryId(Integer categoryId) {
+        return categoryId != null && categoryId > 0;
+    }
+
+    public static boolean isValidReviewId(Integer reviewId) {
+        return reviewId != null && reviewId > 0;
+    }
+
+    public static boolean isValidId(int inventoryId) {
+        return false;
+    }
 }
 

@@ -8,10 +8,12 @@ Date: 11 May 2025
 package za.ac.cput.domain;
 
 public class Review {
-    private String reviewId;
-    private String customerId;
-    private String productId;
-    private Integer rating;
+    private Integer reviewId;
+    private Integer customerId;
+    private Integer productId;
+    private short rating;
+    private String reviewComment;
+    private String reviewDate;
 
     public Review(){
     }
@@ -20,63 +22,91 @@ public class Review {
        this.customerId = builder.customerId;
        this.productId = builder.productId;
        this.rating = builder.rating;
+       this.reviewComment = builder.reviewComment;
+       this.reviewDate = builder.reviewDate;
     }
 
-    public String getReviewId() {
+    public Integer getReviewId() {
         return reviewId;
     }
 
-    public String getCustomerId() {
+    public Integer getCustomerId() {
         return customerId;
     }
 
-    public String getProductId() {
+    public Integer getProductId() {
         return productId;
     }
 
-    public Integer getRating() {
+    public short getRating() {
         return rating;
     }
+
+    public String getReviewComment() {
+        return reviewComment;
+    }
+
+    public String getReviewDate() {
+        return reviewDate;
+    }
+
     public static class Builder{
-        private String reviewId;
-        private String customerId;
-        private String productId;
-        private Integer rating;
+        private Integer reviewId;
+        private Integer customerId;
+        private Integer productId;
+        private short rating;
+        private String reviewDate;
+        private String reviewComment;
 
 
-    public Builder setReviewId(String reviewId) {
+    public Builder setReviewId(Integer reviewId) {
         this.reviewId = reviewId;
         return this;
     }
-        public Builder setCustomerId(String customerId) {
+        public Builder setCustomerId(Integer customerId) {
             this.customerId = customerId;
             return this;
         }
 
-        public Builder setProductId(String productId) {
+        public Builder setProductId(Integer productId) {
             this.productId = productId;
             return this;
         }
 
-        public Builder setRating(Integer rating) {
+        public Builder setRating(short rating) {
             this.rating = rating;
+            return this;
+        }
+
+        public Builder setReviewDate(String reviewDate) {
+            this.reviewDate = reviewDate;
+            return this;
+        }
+
+        public Builder setReviewComment(String reviewComment) {
+            this.reviewComment = reviewComment;
             return this;
         }
 
         @Override
         public String toString() {
             return "Builder{" +
-                    "reviewId='" + reviewId + '\'' +
-                    ", customerId='" + customerId + '\'' +
-                    ", productId='" + productId + '\'' +
+                    "reviewId=" + reviewId +
+                    ", customerId=" + customerId +
+                    ", productId=" + productId +
                     ", rating=" + rating +
+                    ", reviewDate='" + reviewDate + '\'' +
+                    ", reviewComment='" + reviewComment + '\'' +
                     '}';
         }
+
         public Builder copy(Builder builder){
             this.reviewId = builder.reviewId;
             this.customerId = builder.customerId;
             this.productId = builder.productId;
             this.rating = builder.rating;
+            this.reviewDate = builder.reviewDate;
+            this.reviewComment = builder.reviewComment;
             return this;
 
     }
