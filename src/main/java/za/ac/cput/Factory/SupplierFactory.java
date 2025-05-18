@@ -1,4 +1,3 @@
-
 /*
 SupplierFactory POJO Class
 Author: Phindile Lisa Ngozi

@@ -2,7 +2,7 @@
 PaymentFactoryTest POJO Class
 Author: Phindile Lisa Ngozi
 Student Number: 230640893
-Date: 2025/05/18
+Date: 18 May 2025
  */
 package za.ac.cput.Factory;
 
