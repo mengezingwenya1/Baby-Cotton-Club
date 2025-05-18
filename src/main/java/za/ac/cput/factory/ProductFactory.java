@@ -15,7 +15,8 @@ public class ProductFactory {
                 .setPrice(price)
                 .setInStock(inStock)
                 .build();
-        }
+    }
 }
 
 
+//push
