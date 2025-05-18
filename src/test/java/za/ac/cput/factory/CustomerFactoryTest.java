@@ -5,7 +5,7 @@
  * Date : 18 May 2025
  */
 
-package za.ac.cput.Factory;
+package za.ac.cput.factory;
 
 import org.junit.jupiter.api.Test;
 import za.ac.cput.domain.Customer;

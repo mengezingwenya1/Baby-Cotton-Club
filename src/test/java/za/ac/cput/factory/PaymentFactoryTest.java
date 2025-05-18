@@ -4,7 +4,7 @@ Author: Phindile Lisa Ngozi
 Student Number: 230640893
 Date: 18 May 2025
  */
-package za.ac.cput.Factory;
+package za.ac.cput.factory;
 
 import org.junit.jupiter.api.Test;
 import za.ac.cput.domain.Payment;

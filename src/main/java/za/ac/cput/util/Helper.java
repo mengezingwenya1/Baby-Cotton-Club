@@ -64,5 +64,3 @@ public class Helper {
         return discountId != null  && discountId > 0;
     }
 }
-
-
