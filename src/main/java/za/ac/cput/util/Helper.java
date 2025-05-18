@@ -11,7 +11,12 @@ public class Helper {
 
         return s == null || s.isEmpty();
     }
+
     public static LocalDate isValidDate(String date) {
+
+
+
+    public static LocalDate getDate(String date) {
         int year = Integer.parseInt(date.substring(0, 4));
         int month = Integer.parseInt(date.substring(4, 6));
         int day = Integer.parseInt(date.substring(6, 8));
@@ -53,6 +58,11 @@ public class Helper {
 
     public static boolean isValidAmount(double amount) {
         return amount > 0;
+    }
+
+
+    public static boolean isValidDiscountId(Integer discountId) {
+        return discountId != null  && discountId > 0;
     }
 
 }

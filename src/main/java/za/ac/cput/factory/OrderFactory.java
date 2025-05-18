@@ -25,6 +25,8 @@ public class OrderFactory {
             return null;
         }
 
+        LocalDate orderDate = Helper.getDate(orderDateStr);
+
         return new Order.Builder()
                 .setOrderId(orderId)
                 .setCustomerId(customerId)

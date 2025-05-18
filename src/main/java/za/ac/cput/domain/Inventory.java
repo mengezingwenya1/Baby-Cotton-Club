@@ -48,6 +48,8 @@ public class Inventory {
         return supplierId;
     }
 
+
+
     public static class Builder {
         private int inventoryId;
         private int productId;
