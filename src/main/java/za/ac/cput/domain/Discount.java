@@ -10,12 +10,10 @@ package za.ac.cput.domain;
 import java.util.Date;
 
 public class Discount {
-
-    private String discountId;
-    private String discountCode;
-    private String description;
+    private int discountId;
+    private String discountName;
     private String discountType;
-    private double discountValue;
+    private String discountValue;
     private Date startDate;
     private Date endDate;
 
@@ -24,31 +22,26 @@ public class Discount {
 
     public Discount(Builder builder) {
         this.discountId = builder.discountId;
-        this.discountCode = builder.discountCode;
-        this.description = builder.description;
+        this.discountName = builder.discountName;
         this.discountType = builder.discountType;
         this.discountValue = builder.discountValue;
         this.startDate = builder.startDate;
         this.endDate = builder.endDate;
     }
 
-    public String getDiscountId() {
+    public int getDiscountId() {
         return discountId;
     }
 
-    public String getDiscountCode() {
-        return discountCode;
-    }
-
-    public String getDescription() {
-        return description;
+    public String getDiscountName() {
+        return discountName;
     }
 
     public String getDiscountType() {
         return discountType;
     }
 
-    public double getDiscountValue() {
+    public String getDiscountValue() {
         return discountValue;
     }
 
@@ -61,26 +54,20 @@ public class Discount {
     }
 
     public static class Builder {
-        private String discountId;
-        private String discountCode;
-        private String description;
+        private int discountId;
+        private String discountName;
         private String discountType;
-        private double discountValue;
+        private String discountValue;
         private Date startDate;
         private Date endDate;
 
-        public Builder setDiscountId(String discountId) {
+        public Builder setDiscountId(int discountId) {
             this.discountId = discountId;
             return this;
         }
 
-        public Builder setDiscountCode(String discountCode) {
-            this.discountCode = discountCode;
-            return this;
-        }
-
-        public Builder setDescription(String description) {
-            this.description = description;
+        public Builder setDiscountName(String discountName) {
+            this.discountName = discountName;
             return this;
         }
 
@@ -89,7 +76,7 @@ public class Discount {
             return this;
         }
 
-        public Builder setDiscountValue(double discountValue) {
+        public Builder setDiscountValue(String discountValue) {
             this.discountValue = discountValue;
             return this;
         }
@@ -107,11 +94,10 @@ public class Discount {
         @Override
         public String toString() {
             return "Discount{" +
-                    "discountId='" + discountId + '\'' +
-                    ", discountCode='" + discountCode + '\'' +
-                    ", description='" + description + '\'' +
+                    "discountId=" + discountId +
+                    ", discountName='" + discountName + '\'' +
                     ", discountType='" + discountType + '\'' +
-                    ", discountValue=" + discountValue +
+                    ", discountValue='" + discountValue + '\'' +
                     ", startDate=" + startDate +
                     ", endDate=" + endDate +
                     '}';
@@ -119,8 +105,7 @@ public class Discount {
 
         public Builder copy(Discount discount) {
             this.discountId = discount.discountId;
-            this.discountCode = discount.discountCode;
-            this.description = discount.description;
+            this.discountName = discount.discountName;
             this.discountType = discount.discountType;
             this.discountValue = discount.discountValue;
             this.startDate = discount.startDate;
