@@ -7,13 +7,14 @@
 
 package za.ac.cput.domain;
 
-public class Inventory {
+import java.util.Date;
 
-    private String inventoryId;
-    private String productId;
-    private String receivedDate;
-    private int stockAdded;
-    private String supplierId;
+public class Inventory {
+    private int inventoryId;
+    private int productId;
+    private Date receivedDate;
+    private String stockAdded;
+    private int supplierId;
 
     public Inventory() {
     }
@@ -26,54 +27,54 @@ public class Inventory {
         this.supplierId = builder.supplierId;
     }
 
-    public String getInventoryId() {
+    public int getInventoryId() {
         return inventoryId;
     }
 
-    public String getProductId() {
+    public int getProductId() {
         return productId;
     }
 
-    public String getReceivedDate() {
+    public Date getReceivedDate() {
         return receivedDate;
     }
 
-    public int getStockAdded() {
+    public String getStockAdded() {
         return stockAdded;
     }
 
-    public String getSupplierId() {
+    public int getSupplierId() {
         return supplierId;
     }
 
     public static class Builder {
-        private String inventoryId;
-        private String productId;
-        private String receivedDate;
-        private int stockAdded;
-        private String supplierId;
+        private int inventoryId;
+        private int productId;
+        private Date receivedDate;
+        private String stockAdded;
+        private int supplierId;
 
-        public Builder setInventoryId(String inventoryId) {
+        public Builder setInventoryId(int inventoryId) {
             this.inventoryId = inventoryId;
             return this;
         }
 
-        public Builder setProductId(String productId) {
+        public Builder setProductId(int productId) {
             this.productId = productId;
             return this;
         }
 
-        public Builder setReceivedDate(String receivedDate) {
+        public Builder setReceivedDate(Date receivedDate) {
             this.receivedDate = receivedDate;
             return this;
         }
 
-        public Builder setStockAdded(int stockAdded) {
+        public Builder setStockAdded(String stockAdded) {
             this.stockAdded = stockAdded;
             return this;
         }
 
-        public Builder setSupplierId(String supplierId) {
+        public Builder setSupplierId(int supplierId) {
             this.supplierId = supplierId;
             return this;
         }
@@ -81,11 +82,11 @@ public class Inventory {
         @Override
         public String toString() {
             return "Inventory{" +
-                    "inventoryId='" + inventoryId + '\'' +
-                    ", productId='" + productId + '\'' +
-                    ", receivedDate='" + receivedDate + '\'' +
-                    ", stockAdded=" + stockAdded +
-                    ", supplierId='" + supplierId + '\'' +
+                    "inventoryId=" + inventoryId +
+                    ", productId=" + productId +
+                    ", receivedDate=" + receivedDate +
+                    ", stockAdded='" + stockAdded + '\'' +
+                    ", supplierId=" + supplierId +
                     '}';
         }
 
