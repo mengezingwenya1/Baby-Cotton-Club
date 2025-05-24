@@ -13,10 +13,10 @@ public class Helper {
     }
 
 
-    public static LocalDate getOrderDate(String orderDate) {
-        int year = Integer.parseInt(orderDate.substring(0, 4));
-        int month = Integer.parseInt(orderDate.substring(4, 6));
-        int day = Integer.parseInt(orderDate.substring(6, 8));
+    public static LocalDate isValidDate(String Date) {
+        int year = Integer.parseInt(Date.substring(0, 4));
+        int month = Integer.parseInt(Date.substring(4, 6));
+        int day = Integer.parseInt(Date.substring(6, 8));
         return LocalDate.of(year, month, day);
     }
     public static double calculateSubTotal(int quantity, double unitPrice) {

@@ -15,11 +15,10 @@ import static org.junit.jupiter.api.Assertions.*;
 class CustomerFactoryTest {
     private CustomerFactory factory;
     private static Customer customer = CustomerFactory.createCustomer(
-            123456,
             "John",
             "Doe",
             "mengezi@gmail.com",
-            "0781234567");
+            "0781234567","Orchards",(short)1235,"1234","Cape town",(short) 8000,"Western Cape");
 
 
     @Test
@@ -34,7 +33,7 @@ class CustomerFactoryTest {
                 "Jane",
                 "Smith",
                 "invalid-email",
-                "0787654321"
+                "0787654321", "Orchards", (short) 1235, "1234", "Cape Town", (short) 8000, "Western Cape"
         );
         assertNull(invalidCustomer, "Customer with invalid email should be null");
         System.out.println(invalidCustomer);

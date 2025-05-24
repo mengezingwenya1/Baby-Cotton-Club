@@ -1,8 +1,9 @@
-package za.ac.cput.factory;
+package za.ac.cput.Factory;
 
 import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;
 import za.ac.cput.domain.Review;
+import za.ac.cput.factory.ReviewFactory;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 class ReviewFactoryTest {
