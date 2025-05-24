@@ -7,15 +7,20 @@
 
 package za.ac.cput.domain;
 
-import java.util.Date;
+import java.time.LocalDate;
+
 
 public class Discount {
     private int discountId;
     private String discountName;
     private String discountType;
     private String discountValue;
-    private Date startDate;
-    private Date endDate;
+
+    private LocalDate startDate;
+    private LocalDate endDate;
+
+
+
 
     public Discount() {
     }
@@ -45,21 +50,24 @@ public class Discount {
         return discountValue;
     }
 
-    public Date getStartDate() {
+
+    public LocalDate getStartDate() {
         return startDate;
     }
 
-    public Date getEndDate() {
+    public LocalDate getEndDate() {
         return endDate;
     }
+
 
     public static class Builder {
         private int discountId;
         private String discountName;
         private String discountType;
         private String discountValue;
-        private Date startDate;
-        private Date endDate;
+        private LocalDate startDate;
+        private LocalDate endDate;
+
 
         public Builder setDiscountId(int discountId) {
             this.discountId = discountId;
@@ -81,19 +89,14 @@ public class Discount {
             return this;
         }
 
-        public Builder setStartDate(Date startDate) {
+        public Builder setStartDate(LocalDate startDate) {
             this.startDate = startDate;
-            return this;
-        }
-
-        public Builder setEndDate(Date endDate) {
-            this.endDate = endDate;
             return this;
         }
 
         @Override
         public String toString() {
-            return "Discount{" +
+            return "Builder{" +
                     "discountId=" + discountId +
                     ", discountName='" + discountName + '\'' +
                     ", discountType='" + discountType + '\'' +
@@ -103,18 +106,26 @@ public class Discount {
                     '}';
         }
 
-        public Builder copy(Discount discount) {
+        public Builder setEndDate(LocalDate endDate) {
+            this.endDate = endDate;
+            return this;
+
+
+        }
+
+        public Discount copy(Discount discount) {
             this.discountId = discount.discountId;
             this.discountName = discount.discountName;
             this.discountType = discount.discountType;
             this.discountValue = discount.discountValue;
             this.startDate = discount.startDate;
             this.endDate = discount.endDate;
-            return this;
+
+            return discount;
         }
 
         public Discount build() {
             return new Discount(this);
         }
     }
-}
+    }
