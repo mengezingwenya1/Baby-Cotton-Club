@@ -7,18 +7,25 @@ Date: 2025/05/10
 */
 package za.ac.cput.domain;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+
 import java.time.LocalDate;
 
+@Entity
 public class Order {
-    private String orderId;
-    private String customerId;
-    private LocalDate orderDate;
-    private double totalAmount;
-    private int discountId;
+    @Id
+    @GeneratedValue(strategy = jakarta.persistence.GenerationType.IDENTITY)
+    protected String orderId;
+    protected String customerId;
+    protected LocalDate orderDate;
+    protected double totalAmount;
+    protected int discountId;
 
 
 
-    public Order(){
+    protected Order(){
 
     }
 

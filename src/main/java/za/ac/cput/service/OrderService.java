@@ -1,0 +1,38 @@
+package za.ac.cput.service;
+
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import za.ac.cput.domain.Order;
+import za.ac.cput.repository.OrderRespository;
+
+import java.util.List;
+
+@Service
+public class OrderService implements IOrderService{
+    private OrderRespository repository;
+
+    @Autowired
+    public OrderService(OrderRespository repository) {
+        this.repository = repository;
+    }
+    @Override
+    public Order create(Order order) {
+        return null;
+    }
+
+    @Override
+    public Order read(String id) {
+        return null;
+    }
+
+    @Override
+    public Order update(Order order) {
+        return null;
+    }
+
+    @Override
+    public List<Order> getAll() {
+        return null;
+    }
+}

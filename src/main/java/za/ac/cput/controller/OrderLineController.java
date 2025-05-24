@@ -8,6 +8,7 @@ import za.ac.cput.service.OrderLineService;
 import java.util.List;
 
 @RestController
+@RequestMapping("/orderline")
 public class OrderLineController {
 
     private OrderLineService service;
