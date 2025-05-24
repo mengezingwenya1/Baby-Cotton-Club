@@ -31,7 +31,6 @@ class CustomerFactoryTest {
     @Test
     void createCustomerWithInvalidEmail() {
         Customer invalidCustomer = CustomerFactory.createCustomer(
-                123457,
                 "Jane",
                 "Smith",
                 "invalid-email",
