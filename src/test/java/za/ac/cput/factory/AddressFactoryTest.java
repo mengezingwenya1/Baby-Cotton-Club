@@ -41,7 +41,7 @@ class AddressFactoryTest {
                 (short) 10,
                 "Pretoria",
                 "Pretoria",
-                (short) -1,
+                (short) -1,      // Invalid postal code (negative)
                 "Gauteng"
         );
         assertNull(invalidAddress, "Address with invalid postal code should be null");
