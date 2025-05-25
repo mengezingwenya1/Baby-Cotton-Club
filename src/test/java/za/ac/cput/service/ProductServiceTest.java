@@ -1,3 +1,11 @@
+/**
+ * BabyCottonClub
+ * Product.java
+ * Author : Thapelo Ngwenya - 222260971
+ * Date : 11 May 2025
+ */
+
+
 package za.ac.cput.service;
 
 import org.junit.jupiter.api.MethodOrderer;
