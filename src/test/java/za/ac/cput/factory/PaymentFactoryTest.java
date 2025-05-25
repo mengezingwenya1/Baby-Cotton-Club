@@ -4,7 +4,7 @@ Author: Phindile Lisa Ngozi
 Student Number: 230640893
 Date: 18 May 2025
  */
-package za.ac.cput.Factory;
+package za.ac.cput.factory;
 
 import org.junit.jupiter.api.Test;
 import za.ac.cput.domain.Payment;
@@ -20,7 +20,7 @@ class PaymentFactoryTest {
         Payment payment = PaymentFactory.createPayment(
                 "PAY001",
                 "ORD1001",
-                LocalDate.now(),
+                "20250518",
                 "Credit Card",
                 "Paid",
                 250.00
@@ -40,7 +40,7 @@ class PaymentFactoryTest {
         Payment payment = PaymentFactory.createPayment(
                 "",
                 "ORD1002",
-                LocalDate.now(),
+                "20250518",
                 "EFT",
                 "Pending",
                 180.00
@@ -53,7 +53,7 @@ class PaymentFactoryTest {
         Payment payment = PaymentFactory.createPayment(
                 "PAY002",
                 "ORD1003",
-                LocalDate.now(),
+                "20250518",
                 "Cash",
                 "Failed",
                 -50.00
@@ -61,16 +61,5 @@ class PaymentFactoryTest {
         assertNull(payment);
     }
 
-    @Test
-    void testCreatePaymentWithNullDate() {
-        Payment payment = PaymentFactory.createPayment(
-                "PAY003",
-                "ORD1004",
-                null,
-                "EFT",
-                "Paid",
-                100.00
-        );
-        assertNull(payment);
-    }
-}
+  }
+

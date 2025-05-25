@@ -8,16 +8,26 @@ Date: 2025/05/10
 
 package za.ac.cput.domain;
 
-public class OrderLine {
-    private String orderLineId;
-    private String orderId;
-    private String productId;
-    private int quantity;
-    private double unitPrice;
-    private double subTotal;
-    private int discountId;
 
-    public  OrderLine(){
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+
+public class OrderLine {
+    @Id
+    @GeneratedValue(strategy = jakarta.persistence.GenerationType.IDENTITY)
+    protected String orderLineId;
+    protected String orderId;
+    protected String productId;
+    protected int quantity;
+    protected double unitPrice;
+    protected double subTotal;
+    protected int discountId;
+
+    protected   OrderLine(){
 
     }
     private OrderLine(Builder builder) {
